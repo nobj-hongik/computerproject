@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+/elasticsearch-2.2.0.deb/

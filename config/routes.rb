@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :magazines
   devise_for :users
-  resources :nutritions
+  resources :nutritions do
+    collection { get :search }
+  end
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

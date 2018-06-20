@@ -15,6 +15,11 @@ class NutritionsController < ApplicationController
     
   end
 
+  def search
+    @nutritions = Nutrition.search(params[:q]).records
+    render action: "index"
+  end  
+
   # GET /nutritions/1
   # GET /nutritions/1.json
   def show

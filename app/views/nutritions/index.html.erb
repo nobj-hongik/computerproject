@@ -76,6 +76,12 @@
           </tbody>
       </table>
   </div>
+  <%= form_tag search_nutritions_path, method: 'get' do %>
+      <%= text_field_tag :q, params[:q] %>
+      <%= submit_tag :검색 %>
+      <%= link_to '전체 목록', nutritions_path if params[:q] %>
+  <% end %>
+  <br>
   <%= link_to '영양제 등록하기', new_nutrition_path %>
 </div>
 
