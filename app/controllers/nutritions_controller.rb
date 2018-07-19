@@ -8,7 +8,7 @@ class NutritionsController < ApplicationController
     
     if params[:function]
       @function = params[:function]
-      @nutritions = Nutrition.where(:function => @function).order('created_at DESC')
+      @nutritions = Nutrition.search(params[:function]).records
     else  
       @nutritions = Nutrition.all
     end
